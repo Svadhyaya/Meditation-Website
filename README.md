@@ -1,2 +1,2 @@
-# Meditation-Website
-HTML5/CSS3
+# Mindfulness_Network
+Trial website for mindfulness
