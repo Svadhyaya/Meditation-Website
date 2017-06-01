@@ -1,123 +1,189 @@
-/* CSS */
+/* CSS Normal Style */
 
-body, html         {
-                    font-size: 20px;
-                    font-family: monospace;
-                    background-color: white;
-                    text-align: center;}
+body, html {
+    font-family: Rubik, sans-serif;
+    background-color: white;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    background-color: #DADADA;
+}               
 
-.headertext        {
-                    font-size: 30px;
-                    font-family: 'BioRhyme', serif;
-                    color: dodgerblue;}
+h1 {
+    font-size: 30px;
+    font-family: Rubik, sans-serif;
+    color: black;
+}
         
+p {
+    display: inline-block;
+    font-family: inherit;
+    color: white;
+    font-family: nunito;
+    font-size: 22px;}
 
+#intro {
+    padding: 1px;
+    background-color: grey;
+    border: solid;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-width: 0;
+}
 
-header #omlogo div {
-                    background-color: white;
-                    align-items: center;
-                    padding-bottom: 10px;}
+#intro h1 {
+    color: white;
+}
 
-header figcaption  {   
-                    padding-bottom: 15px;
-                    color: dodgerblue;}
+#breatheinstructions p {
+    color: black;
+}
 
-        
-#instructions > li {    
-                    list-style-type: none;
-                    line-height: 50px;
-                    margin: 10px;}
+#breatheinstructions {
+    margin-bottom: -95px;
+}
 
+#gif {
+    background-color: #DADADA;
+    padding-top: 50px;    
+}            
 
-aside h3           {
-                    padding-left: 20px;
-                    color: darkslategrey;
-                    font-size: 50px;
-                    text-decoration: underline;
-                    padding-bottom: 20px;}
-
-
-aside              {         
-                    padding-bottom: 10px;}
-
-
-p                  {
-                    line-height: 2.0rem;
-                    font-family: inherit;
-                    color: dodgerblue;}
-
-
-#introheader       {
-                    background-color: lightgrey;
-                    height: 50px;
-                    width: auto;
-                    text-align: center;}
-
-
-#protiptext        {
-                    font-size: 15px;
-                    font-family: monospace;
-                    color: lightslategrey}
-
-
-            
-#localanchors      {
-                    padding: 10px;
-                    background-color: dodgerblue;}
-
-#localanchors a    {
-                    color: white;
-                    text-decoration: none;
-                    font-size-adjust: auto;
-                    font-size: 30px;
-                    line-height: 30px;
-                    margin-right: 15px;
-                    border: solid;
-                    border-color: blue;
-                    padding: 2px;
-                    border-width: 2.5px;
-                    border-radius: 9px;
-                    border-bottom-width: 5px;}
-
-#localanchors li   {
-                    margin: 30px;
-                    list-style: none;}
-
-#introheader1      {
-                    color: darkslategrey;
-                    font-size: 25px;}
-
-article p          {
-                    margin-top: 30px;}
-
-#history           {  
-                    background-color: dodgerblue;}
+#history {  
+    background-color: dodgerblue;
+    margin-top: 0px;
+    padding-top: 15px;
+    border: solid;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-width: 0;
+}
  
-#history h2        {
-                    color: white;
-                    padding: 10px;}
+#history h2 {
+    color: white;
+    padding: 10px;
+}
 
-section p          {
-                    line-height: 50px;}
+section p {
+    line-height: 50px;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.menu > a {
+    flex-grow:1;
+    line-height: 3;
+    background: #DADADA;
+    color: black;
+    text-decoration:none;
+    text-align:center;
+    padding:15px;
+    border:1.5px solid dodgerblue;
+    border-bottom-left-radius: 8px;
+    border-top-right-radius: 8px;
+    margin-right: 3px;
+    margin-left: 3px;
+    max-width: 250px;
+    
+}
+
+.menu > a:hover {
+    background-color: dodgerblue;
+    color: white;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+#practice {
+    margin-top: 40px;
+    font-family: Rubik;
+    font-size: 20px;
+    color: #4837e7;   
+}
+
+footer {
+    background-color: grey;
+    width: 100vw;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    height: 80px;
+    text-align: center;
+    bottom: 0;
+    position: relative;
+}
+
+footer a {
+    color: white;
+}
+
+/*Animated button with cursor*/
+
+.button {
+    text-decoration: none;
+    background-color: dodgerblue;
+    border-radius: 4px;
+    font-size: 24px;
+    padding: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    position: relative;
+    top: 25px;
+    transition: all 0.3s;
+    cursor: pointer;   
+}
+
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: 10px;
+    transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 30px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+/*CSS Responsive Style*/
+
+@media only screen and (max-width:45em){
+    .menu {
+        flex-direction:column;
+        margin-top: 50px;
+    } 
+.menu > a {
+        margin-bottom: 10px;
+        margin-top: 10px;
+        max-width: 75vw;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        
+        
+    }
+#gif img {
+        width: 400px;
+    }
+}
 
 
-#externalanchors   {
-                    line-height: 4;
-                    background-color: dodgerblue;}
 
-#externalanchors li a { 
-                    color: white;
-                    font-family: sans-serif;}
-
-audio              { 
-                    width: 100px;}
-
-
-
-
-
-
-
-
-
-
+    
