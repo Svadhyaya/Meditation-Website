@@ -6,9 +6,31 @@
     <link rel="stylesheet" href=stylesheet1.css media="screen">
     <link href="https://fonts.googleapis.com/css?family=Nunito|Rubik" rel="stylesheet">
     <link rel="stylesheet" href="animate.min.css" media="screen">
+    	<link rel="stylesheet" href="/swipebox/src/css/swipebox.css">
+    <script src="/swipebox/lib/ios-orientationchange-fix.js"></script>
+	<script src="/swipebox/lib/jquery-2.1.0.min.js"></script>
+	<script src="/swipebox/src/js/jquery.swipebox.js"></script>
+	<script type="text/javascript">
+	$( document ).ready(function() {
+			/* Basic Gallery */
+			$( '.swipebox' ).swipebox();
+			
+			/* Video */
+			$( '.swipebox-video' ).swipebox();
+
+			/* Dynamic Gallery */
+			$( '#gallery' ).click( function( e ) {
+				e.preventDefault();
+				$.swipebox( [
+					{ href : 'http://swipebox.csag.co/mages/image-1.jpg', title : 'My Caption' },
+					{ href : 'http://swipebox.csag.co/images/image-2.jpg', title : 'My Second Caption' }
+				] );
+			} );
+
+      });
+	</script>
 </head>               
 <body>
-    
 <section id="introduction to meditation">
     <header id="intro">
         <h1 class="animated fadeInDown">Stop what you are doing.</h1>
@@ -20,7 +42,6 @@
         <img id="gif" src="/images/breathegif.gif" alt="Take 3 deep breaths and relax.">
         </div>
 </section>
-    
 <section id="history">
     <h2>An ancient practice</h2> 
         <img src="/images/buddha.png" alt="A buddha in meditative pose" title="Gautama Buddha in meditation" height="300" width="300">
@@ -30,10 +51,10 @@
         <h3 class="animated rubberBand">Experience freely guided classes</h3>
     </header>
 <nav class="menu">
-        <a href="https://www.youtube.com/watch?v=rOne1P0TKL8" target="_blank" style="text-decoration: none; padding: .2em 1em;">The 3 Minute Breathing Space</a>
-        <a href="https://www.youtube.com/watch?v=CyKhfUdOEgs" target="_blank" style="text-decoration: none; padding: .2em 1em;">Scan your Body</a>
-        <a href="https://www.youtube.com/watch?v=pLt-E4YNVHU&t=5s" target="_blank" style="text-decoration: none; padding: .2em 1em;">Kindness</a>
-        <a href="https://www.youtube.com/watch?v=whY8iT0g15M" target="_blank" style="text-decoration: none; padding: .2em 1em;">Breath and Body</a>        
+        <a class="swipebox-video" href="https://www.youtube.com/watch?v=rOne1P0TKL8" style="text-decoration: none; padding: .2em 1em;">The 3 Minute Breathing Space</a>
+        <a class="swipebox-video" href="https://www.youtube.com/watch?v=CyKhfUdOEgs" style="text-decoration: none; padding: .2em 1em;">Scan your Body</a>
+        <a class="swipebox-video" href="https://www.youtube.com/watch?v=pLt-E4YNVHU&t=5s" style="text-decoration: none; padding: .2em 1em;">Kindness</a>
+        <a class="swipebox-video" href="https://www.youtube.com/watch?v=whY8iT0g15M" style="text-decoration: none; padding: .2em 1em;">Breath and Body</a>        
 </nav>
 <footer>
     <a href="https://www.facebook.com/groups/1212344788861986/" target="_blank" class="button"><span>Join us</span></a> 
